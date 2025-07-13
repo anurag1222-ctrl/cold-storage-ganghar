@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganghar Cold Storage Proposal</title>
+    <style>
+        :root {
+            --primary: #2c7873;
+            --secondary: #6fb98f;
+            --accent: #f8c537;
+            --dark: #004445;
+            --light: #f8f5f1;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--light);
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+            padding: 30px 15px;
+            text-align: center;
+            border-bottom: 5px solid var(--accent);
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        
+        .tagline {
+            font-size: 1rem;
+            font-weight: 300;
+        }
+        
+        section {
+            background: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 8px;
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+        
+        .highlight {
+            background-color: var(--accent);
+            padding: 2px 5px;
+            font-weight: bold;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .feature-card {
+            background: var(--light);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary);
+        }
+        
+        .feature-card h3 {
+            color: var(--dark);
+            margin-top: 0;
+            font-size: 1.1rem;
+        }
+        
+        .financials {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        
+        .financial-card {
+            text-align: center;
+            padding: 15px;
+            background: #f0f8ff;
+            border-radius: 8px;
+        }
+        
+        .financial-card .amount {
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+            margin-top: 20px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 12px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--secondary);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 25px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 3px solid var(--accent);
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: var(--dark);
+            font-size: 0.9rem;
+        }
+        
+        .cta {
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+            padding: 30px 15px;
+            border-radius: 8px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--dark);
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            margin-top: 15px;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: var(--dark);
+            color: white;
+            margin-top: 30px;
+            font-size: 0.9rem;
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        @media (min-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .tagline {
+                font-size: 1.1rem;
+            }
+            
+            section {
+                padding: 25px;
+                margin: 25px 0;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            .features, .financials {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 20px;
+            }
+            
+            .financial-card .amount {
+                font-size: 1.8rem;
+            }
+            
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Ganghar Cold Storage Solution</h1>
+            <p class="tagline">Preserving Agricultural Wealth in Arrah, Bihar</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section id="overview">
+            <h2>Business Overview</h2>
+            <p>Proposed is a <span class="highlight">5 metric ton capacity cold storage facility</span> in Ganghar, Arrah to serve local farmers and traders. The facility will primarily store potatoes, onions, and seasonal fruits/vegetables, reducing post-harvest losses and enabling better price realization.</p>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Local Impact</h3>
+                    <p>Directly benefit 200+ small farmers in Ganghar and surrounding areas by providing affordable storage solutions.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Multi-Commodity Storage</h3>
+                    <p>Temperature-controlled zones for different produce: potatoes (2-4°C), onions (0-1°C), and fruits/vegetables (varies by type).</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Solar Hybrid System</h3>
+                    <p>Proposed solar-powered cooling with grid backup to ensure uninterrupted operation despite Bihar's power challenges.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="financials">
+            <h2>Financial Highlights</h2>
+            <p>With government subsidies, the project becomes highly viable with quick breakeven:</p>
+            
+            <div class="financials">
+                <div class="financial-card">
+                    <h3>Total Project Cost</h3>
+                    <div class="amount">₹50 Lakhs</div>
+                    <p>Including construction and equipment</p>
+                </div>
+                <div class="financial-card">
+                    <h3>Expected Subsidy</h3>
+                    <div class="amount">₹20 Lakhs</div>
+                    <p>Through NHB/NABARD schemes</p>
+                </div>
+                <div class="financial-card">
+                    <h3>Annual Revenue</h3>
+                    <div class="amount">₹15-20 Lakhs</div>
+                    <p>At 80% capacity utilization</p>
+                </div>
+                <div class="financial-card">
+                    <h3>Breakeven</h3>
+                    <div class="amount">3-4 Years</div>
+                    <p>With proper operations</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="implementation">
+            <h2>Implementation Plan</h2>
+            <p>We have identified the location in Ganghar and will leverage government schemes for rapid implementation:</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Month 1-2</div>
+                    <p>Finalize subsidy approvals and secure financing</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Month 3-4</div>
+                    <p>Construction of storage structure and electrical work</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Month 5</div>
+                    <p>Equipment installation and testing</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Month 6</div>
+                    <p>Commence operations with pilot group of farmers</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="benefits">
+            <h2>Community Benefits</h2>
+            <ul>
+                <li>Reduce post-harvest losses from 30% to under 10%</li>
+                <li>Enable farmers to sell during off-season at 40-60% higher prices</li>
+                <li>Create 5-8 direct employment opportunities locally</li>
+                <li>Support women's self-help groups with storage for value-added products</li>
+            </ul>
+        </section>
+        
+        <section class="cta">
+            <h2>Join Us in Transforming Ganghar's Agricultural Economy</h2>
+            <p>We're seeking partners, investors, and government support to make this vision a reality.</p>
+            <a href="#contact" class="cta-button">Get Involved Today</a>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact Information</h2>
+            <p><strong>Location:</strong> Ganghar, Arrah, Bihar</p>
+            <p><strong>Phone:</strong> <a href="tel:9835823077">9835823077</a></p>
+            <p><strong>Email:</strong> <a href="mailto:anuragsingh9835@gmail.com">anuragsingh9835@gmail.com</a></p>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>Ganghar Cold Storage Project | Proposal for Agricultural Infrastructure Development</p>
+            <p>© 2023 | Designed for Arrah District Farmers</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for financial cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const financialCards = document.querySelectorAll('.financial-card');
+            
+            // Add animation class after short delay
+            setTimeout(() => {
+                financialCards.forEach((card, index) => {
+                    card.style.animationDelay = `${index * 0.1}s`;
+                    card.classList.add('animate-pop');
+                });
+            }, 300);
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
